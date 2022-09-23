@@ -19,3 +19,8 @@ class LinkedList:
         while last_node.next:
             last_node = last_node.next
         last_node.next = new_node
+
+    def count(self, node):
+        if node is None:
+            return 0
+        return 1 + self.count(node.next)
